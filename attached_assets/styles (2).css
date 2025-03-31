@@ -1,0 +1,199 @@
+body {
+    background: #f5f5f5;
+    font-family: 'Arial', sans-serif;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a.active {
+    color: #0056b3;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+#color-picker {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: left for picker, right for schemes */
+    gap: 20px;
+    padding: 20px;
+}
+
+.main-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.color-display {
+    width: 150px;
+    height: 150px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+
+#color-input {
+    width: 100px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.color-values {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+    width: 200px;
+}
+
+.color-values label {
+    display: block;
+    margin: 5px 0;
+}
+
+.color-values input {
+    width: 70px; /* For HEX input */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.color-values div {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.color-values div input {
+    width: 50px; /* For RGB and HSL inputs */
+}
+
+.share-color {
+    margin-top: 20px;
+}
+
+.share-color input {
+    width: 100px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.share-color button {
+    background: #55D0FC;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.share-color button:hover {
+    background: #0056b3;
+}
+
+.preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#preview-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#preview-text {
+    margin-top: 10px;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.color-schemes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-schemes .scheme {
+    text-align: center;
+}
+
+.color-schemes .scheme span {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9em;
+}
+
+.color-schemes .scheme div {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.color-schemes .scheme div:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #color-picker {
+        grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    }
+    .color-schemes {
+        margin-top: 20px;
+    }
+}
